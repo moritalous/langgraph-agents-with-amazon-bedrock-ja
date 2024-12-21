@@ -1,16 +1,16 @@
-# Lab 2: LangGraph Components
+# ラボ 2: LangGraph コンポーネント
 
-Welcome to this section on implementing intelligent agents using LangGraph, Anthropic's Claude model, and Amazon Bedrock. In our previous session, we took a hands-on approach by implementing a REACT (Reasoning and Acting) agent from scratch. This exercise gave us a fundamental understanding of how these agents operate and make decisions.
+LangGraph、Anthropic の Claude モデル、Amazon Bedrock を使用してインテリジェント エージェントを実装するこのセクションへようこそ。前回のセッションでは、REACT (推論と行動) エージェントを最初から実装するという実践的なアプローチを採用しました。この演習により、これらのエージェントがどのように動作し、決定を下すかについて基本的な理解が得られました。
 
-Now, we're taking a significant step forward. We'll be leveraging LangGraph, a powerful framework for creating structured conversations and decision-making flows with language models. Instead of building everything from the ground up, we'll use LangGraph to create a more sophisticated and flexible agent. We'll also be upgrading our language model, moving from a basic implementation to using Anthropic's Claude model via Amazon Bedrock.
+今、私たちは大きな一歩を踏み出します。言語モデルを使用して構造化された会話と意思決定フローを作成するための強力なフレームワークである LangGraph を活用します。すべてをゼロから構築するのではなく、LangGraph を使用して、より洗練された柔軟なエージェントを作成します。また、言語モデルをアップグレードし、基本的な実装から Amazon Bedrock 経由の Anthropic の Claude モデルを使用するように移行します。
 
-This section will demonstrate how to create a robust, scalable agent capable of handling complex, multi-step queries. You'll see how the structure provided by LangGraph enhances our agent's capabilities, and how the advanced features of Claude and the scalability of Amazon Bedrock take our implementation to the next level.
-By the end of this section, you'll have a clear understanding of how to use these tools to create state-of-the-art AI agents for real-world applications. 
+このセクションでは、複雑で複数のステップのクエリを処理できる堅牢でスケーラブルなエージェントを作成する方法を示します。 LangGraph が提供する構造によってエージェントの機能がどのように強化されるか、また Claude の高度な機能と Amazon Bedrock のスケーラビリティによって実装が次のレベルに引き上げられることが分かります。
+このセクションの終わりまでに、これらのツールを使用して現実世界のアプリケーション向けの最先端の AI エージェントを作成する方法を明確に理解できるようになります。
 
-In essence, LangGraph is an extension of LangChain that supports graphs. Single and Multi-agent workflows are described and represented as graphs. The tool allows for well controlled "flows".
+本質的に、LangGraph はグラフをサポートする LangChain の拡張機能です。単一エージェントと複数エージェントのワークフローはグラフとして記述および表現されます。このツールを使用すると、適切に制御された「フロー」が可能になります。
 
-The components of a LangGraph graph are depicted in the image below.
+LangGraph グラフのコンポーネントは、以下の画像に示されています。
 
-![LangGraph components](../assets/lab2_1.png)
+![LangGraph コンポーネント](../assets/lab2_1.png)
 
-Let's dive in!
+さっそく見ていきましょう。

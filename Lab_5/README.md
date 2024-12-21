@@ -1,10 +1,11 @@
-# Lab 5: Human in the Loop
+# ラボ 5:Human in the Loop
 
-Welcome to this advanced section on implementing human-in-the-loop interactions with AI agents using LangGraph, Anthropic's Claude model on Amazon Bedrock. 
-This section is designed for solution architects and data scientists looking to build sophisticated AI systems with human oversight capabilities.
+Amazon Bedrock 上の Anthropic の Claude モデルである LangGraph を使用して、AI エージェントとの人間がループに参加するインタラクションを実装する高度なセクションへようこそ。
 
-Before we dive into the code, let's understand the big picture. Imagine you're architecting a mission-critical AI system for a large enterprise. This system needs to make complex decisions, but also requires human oversight for accountability and error correction. This is where human-in-the-loop AI comes in.
+このセクションは、人間による監視機能を備えた高度な AI システムの構築を目指すソリューション アーキテクトとデータ サイエンティスト向けに設計されています。
 
-Think of our system as a collaborative decision-making pipeline between AI and human experts. LangGraph provides the framework for this pipeline, the foundation models on Amazon Bedrock bring the AI capabilities, which also brings the scalable cloud infrastructure.
+コードに進む前に、全体像を理解しましょう。大企業向けのミッション クリティカルな AI システムを設計していると想像してください。このシステムは複雑な決定を行う必要がありますが、説明責任とエラー修正のために人間による監視も必要です。ここで人間がループに参加する AI が登場します。
 
-Let's dive in!
+このシステムを、AI と人間の専門家による共同意思決定パイプラインと考えてください。LangGraph はこのパイプラインのフレームワークを提供し、Amazon Bedrock の基盤モデルは AI 機能をもたらし、スケーラブルなクラウド インフラストラクチャももたらします。
+
+さあ、始めましょう!

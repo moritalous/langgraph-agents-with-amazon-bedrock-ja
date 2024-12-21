@@ -1,10 +1,9 @@
-# Lab 4: Persistence and Streaming
+# ラボ 4: 永続性とストリーミング
 
-Welcome to this section, where we will explore two critical concepts emerging in the development of sophisticated AI agents, particularly those designed for extended operations: persistence and streaming. These concepts are fundamental to creating robust, responsive, and scalable AI solutions.
+このセクションへようこそ。ここでは、高度な AI エージェント、特に長期運用向けに設計されたエージェントの開発で出現した 2 つの重要な概念、永続性とストリーミングについて説明します。これらの概念は、堅牢で応答性に優れ、スケーラブルな AI ソリューションを作成するための基礎となります。
 
-Persistence enables the preservation of an agent's state at specific points in time, facilitating seamless resumption of operations in subsequent interactions. This capability is particularly crucial for long-running applications where continuity is paramount. Streaming, on the other hand, provides real-time visibility into the agent's operations, emitting a series of signals that indicate the agent's current actions and thought processes. This feature is invaluable for monitoring and understanding the behavior of long-running applications.
+永続性により、特定の時点でのエージェントの状態を保存できるため、後続のインタラクションでの操作をシームレスに再開できます。この機能は、継続性が最優先される長期実行アプリケーションにとって特に重要です。一方、ストリーミングでは、エージェントの操作をリアルタイムで可視化し、エージェントの現在のアクションと思考プロセスを示す一連のシグナルを発します。この機能は、長期実行アプリケーションの動作を監視および理解するために非常に役立ちます。
 
-In this section, we will explore these concepts in depth utilizing Anthropic's Claude model on Amazon Bedrock as our foundation.
+このセクションでは、Amazon Bedrock 上の Anthropic の Claude モデルを基盤として、これらの概念を詳細に説明します。
 
-
-Let's dive in!
+さっそく始めましょう!

@@ -1,17 +1,17 @@
-# Lab 3: Agentic Search Tools
+# ラボ 3: エージェント検索ツール
 
-Welcome to this section introducing the concept of agentic search, a more advanced form of search used by AI agents. Unlike standard search or zero-shot learning, agentic search allows agents to access dynamic data, provide sources for information, and handle complex queries by breaking them down into sub-questions. The process involves understanding the query, selecting the best source for information, extracting relevant data, and filtering out less important details. This approach helps reduce hallucinations and improves human-computer interaction.
+このセクションでは、AI エージェントが使用するより高度な検索形式であるエージェント検索の概念を紹介します。標準検索やゼロショット学習とは異なり、エージェント検索では、エージェントが動的データにアクセスし、情報のソースを提供し、複雑なクエリをサブ質問に分解して処理できます。このプロセスには、クエリの理解、情報の最適なソースの選択、関連データの抽出、重要度の低い詳細の除外が含まれます。このアプローチは、幻覚を減らし、人間とコンピューターの相互作用を改善するのに役立ちます。
 
-The section demonstrates the difference between regular search tools and agentic search tools through practical examples. Using a weather query for San Francisco, it shows how a regular search (using `DuckDuckGo`) provides links that require further processing to extract useful information. In contrast, the agentic search tool (using `Tavily`) returns structured data in JSON format, which is ideal for AI agents to process. 
+このセクションでは、実際の例を使用して、通常の検索ツールとエージェント検索ツールの違いを示します。サンフランシスコの天気クエリを使用して、通常の検索 (`DuckDuckGo` を使用) が、有用な情報を抽出するためにさらに処理が必要なリンクを提供する方法を示します。対照的に、エージェント検索ツール (`Tavily` を使用) は、AI エージェントが処理するのに最適な JSON 形式の構造化データを返します。
 
-A basic example of an agentic search tool implementation is shown in the picture below.
+エージェント検索ツールの実装の基本的な例を次の図に示します。
 
-![Agentic Search Tool](../assets/lab3_1.png)
+![エージェント検索ツール](../assets/lab3_1.png)
 
-When the agent decides to send the query to the search tool, it would first work on understanding the question and divide it to sub-questions if needed. This is an important point because it allows agents to handle complex queries. Then, for each subquery, the search tool will have to find the best source, choosing from multiple integrations. For example, if an agent would ask "How is the weather in San Francisco?" The search tool should use the weather API for best results. The job doesn't end with finding the correct source. The search tool would then have to extract only the relevant information to the subquery. 
+エージェントが検索ツールにクエリを送信すると決定すると、まず質問を理解し、必要に応じてサブ質問に分割します。これは、エージェントが複雑なクエリを処理できるようにするため、重要なポイントです。次に、各サブクエリについて、検索ツールは複数の統合から選択して最適なソースを見つける必要があります。たとえば、エージェントが「サンフランシスコの天気はどうですか?」と質問した場合、検索ツールは最適な結果を得るために天気 API を使用する必要があります。この作業は、正しいソースを見つけることで終わりません。検索ツールは、サブクエリに関連する情報のみを抽出する必要があります。
 
-A basic implementation of this can be achieved through a process of chunking the source, and run a quick vector search to retrieve the top-K chunks. After retrieving the data from its source, the search tool would then score the results and filter out the less relevant information. This implementation is shown in the picture below.
+これを基本的に実装するには、ソースをチャンク化し、クイック ベクトル検索を実行して上位 K 個のチャンクを取得します。ソースからデータを取得した後、検索ツールは結果にスコアを付け、関連性の低い情報を除外します。この実装を下の図に示します。
 
-![Agentic Search Tool](../assets/lab3_2.png)
+![エージェント検索ツール](../assets/lab3_2.png)
 
-Let's dive in!
+早速始めましょう!

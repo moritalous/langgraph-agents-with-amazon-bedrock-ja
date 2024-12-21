@@ -1,18 +1,18 @@
-# Lab 1: Building a ReAct Agent from Scratch
+# ラボ 1: ReAct エージェントをゼロから構築する
 
-Welcome to this section on building a ReAct (Reasoning and Acting) agent from scratch using Amazon Bedrock and Anthropic's Claude model. 
+Amazon Bedrock と Anthropic の Claude モデルを使用して、ReAct (推論と行動) エージェントをゼロから構築するこのセクションへようこそ。
 
-The ReAct approach aims to combine reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) capabilities of large language models (LLMs) in an interleaved manner. It was proposed in the paper [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629).
+ReAct アプローチは、大規模言語モデル (LLM) の推論 (思考の連鎖の促進など) 機能と行動 (行動計画の生成など) 機能をインターリーブ方式で組み合わせることを目的としています。これは、論文 [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) で提案されました。
 
-![ReAct approach](../assets/lab1_1.png)
+![ReAct アプローチ](../assets/lab1_1.png)
 
-The structure of the agent within the section looks like the picture below, with components:
-- User Input
-- System prompt
-- Language Model
-- Identified action
-- Tool to be executed by the action
+セクション内のエージェントの構造は、以下の図のようになります。コンポーネントは次のとおりです:
+- ユーザー入力
+- システム プロンプト
+- 言語モデル
+- 識別されたアクション
+- アクションによって実行されるツール
 
-![Agent structure](../assets/lab1_2.png)
+![エージェント構造](../assets/lab1_2.png)
 
-Let's begin!
+では、始めましょう!

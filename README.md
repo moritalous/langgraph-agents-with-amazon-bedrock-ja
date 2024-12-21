@@ -1,65 +1,65 @@
-# LangGraph Agents with Amazon Bedrock
+# Amazon Bedrock を使用した LangGraph エージェント
 
-This repository contains a workshop adapted from the course [AI Agents in LangGraph](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/) 
-created by [Harrison Chase](https://www.linkedin.com/in/harrison-chase-961287118) (Co-Founder and CEO of [LangChain](https://www.langchain.com/)) and [Rotem Weiss](https://www.linkedin.com/in/rotem-weiss) (Co-founder and CEO of [Tavily](https://tavily.com/)), and hosted on [DeepLearning.AI](https://www.deeplearning.ai/).
-The original content is used with the consent of the authors.
+このリポジトリには、[Harrison Chase](https://www.linkedin.com/in/harrison-chase-961287118) ([LangChain](https://www.langchain.com/) の共同創設者兼 CEO) と [Rotem Weiss](https://www.linkedin.com/in/rotem-weiss) ([Tavily](https://tavily.com/) の共同創設者兼 CEO) によって作成され、[DeepLearning.AI](https://www.deeplearning.ai/) でホストされているコース [AI Agents in LangGraph](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/) から改変されたワークショップが含まれています。
 
-This workshop is also avalailable in AWS Workshop Studio [here](https://catalog.us-east-1.prod.workshops.aws/workshops/9bc28f51-d7c3-468b-ba41-72667f3273f1/en-US).
+元のコンテンツは、著者の同意を得て使用されています。
 
-Make sure to read and follow this README before you go through the material to ensure a smooth experience.
+このワークショップは、AWS Workshop Studio [こちら](https://catalog.us-east-1.prod.workshops.aws/workshops/9bc28f51-d7c3-468b-ba41-72667f3273f1/en-US) でもご利用いただけます。
 
-## Outline
+スムーズな体験を実現するために、資料をご覧になる前に必ずこの README を読んで従ってください。
 
-The workshop:
-- explores the latest advancements in AI agents and agentic workflows, leveraging improvements in function calling LLMs and specialized tools like agentic search
-- utilizes LangChain's updated support for agentic workflows and introduces LangGraph, an extension for building complex agent behaviors
-- provides insights into key design patterns in agentic workflows including *planning, tool use, reflection, multi-agent communication, memory*
+## 概要
 
-The material is divided in six Jupyter Notebooks Labs that will help you understand the LangGraph framework, its underlying concepts, and how to use it with Amazon Bedrock:
+ワークショップの内容:
+- 関数呼び出し LLM の改善やエージェント検索などの専用ツールを活用し、AI エージェントとエージェント ワークフローの最新の進歩を探ります
+- LangChain のエージェント ワークフローに対する更新されたサポートを活用し、複雑なエージェント動作を構築するための拡張機能である LangGraph を紹介します
+- *計画、ツールの使用、リフレクション、マルチエージェント通信、メモリ* を含むエージェント ワークフローの主要な設計パターンに関する洞察を提供します
 
-- Lab 1: [Building a ReAct Agent from Scratch](Lab_1/)
-    - Build a basic ReAct agent from scratch using Python and an LLM, implementing a loop of reasoning and acting to solve tasks through tool usage and observation
-- Lab 2: [LangGraph Components](Lab_2/)
-    - Introduction to LangGraph, a tool for implementing agents with cyclic graphs, demonstrating how to create a more structured and controllable agent using components like nodes, edges, and state management
-- Lab 3: [Agentic Search Tools](Lab_3/)
-    - Introduction to Agentic search tools, enhancing AI agents' capabilities by providing structured, relevant data from dynamic sources, improving accuracy and reducing hallucinations
-- Lab 4: [Persistence and Streaming](Lab_4/)
-    - Persistence and streaming are crucial for long-running agent tasks, enabling state preservation, resumption of conversations, and real-time visibility into agent actions and outputs
-- Lab 5: [Human in the Loop](Lab_5/)
-    - Advanced human-in-the-loop interaction patterns in LangGraph, including adding breaks, modifying states, time travel, and manual state updates for better control and interaction with AI agents
-- Lab 6: [Essay Writer](Lab_6/)
-    - Build an AI essay writer using a multi-step process involving planning, research, writing, reflection, and revision, implemented as a graph of interconnected agents
+資料は 6 つの Jupyter Notebooks ラボに分かれており、LangGraph フレームワーク、その基礎となる概念、および Amazon Bedrock での使用方法を理解するのに役立ちます:
 
-If this is your first time working with LangGraph, we recommend to refer to the [original course](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/) for detailed video explanations.
+- ラボ 1: [ReAct エージェントをゼロから構築する](Lab_1/)
+- Python と LLM を使用して基本的な ReAct エージェントをゼロから構築し、ツールの使用と観察を通じてタスクを解決するための推論と動作のループを実装します
+- ラボ 2: [LangGraph コンポーネント](Lab_2/)
+- 循環グラフを使用してエージェントを実装するためのツールである LangGraph の紹介ノード、エッジ、状態管理などのコンポーネントを使用して、より構造化され制御可能なエージェントを作成する方法を示します
+- ラボ 3: [エージェント検索ツール](Lab_3/)
+- エージェント検索ツールの紹介。動的なソースから構造化された関連データを提供することで AI エージェントの機能を強化し、精度を向上させ、幻覚を軽減します
+- ラボ 4: [永続性とストリーミング](Lab_4/)
+- 永続性とストリーミングは、エージェントの長期タスクに不可欠であり、状態の保存、会話の再開、エージェントのアクションと出力のリアルタイムの可視性を可能にします
+- ラボ 5: [人間が関与するループ](Lab_5/)
+- LangGraph の高度な人間が関与するループ インタラクション パターン。中断の追加、状態の変更、タイム トラベル、手動状態の更新など、AI エージェントの制御とインタラクションを改善します
+- ラボ 6: [エッセイ ライター](Lab_6/)
+- 計画、調査、執筆、考察、改訂を含む複数のステップのプロセスを使用して AI エッセイ ライターを構築し、実装します相互接続されたエージェントのグラフとして
 
-Let's get started with the setup of the environment.
+LangGraph を初めて使用する場合は、[オリジナル コース](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/) を参照して、詳細なビデオの説明を確認することをお勧めします。
 
-## Setup your virtual environment
+環境の設定を始めましょう。
 
-This instructions are meant to be used locally with [AWS authentication](https://docs.aws.amazon.com/cli/v1/userguide/cli-authentication-short-term.html), as well as within an [Amazon SageMaker JupyterLab](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-jl.html) or [Amazon SageMaker Code Editor](https://docs.aws.amazon.com/sagemaker/latest/dg/code-editor.html) instance.
+## 仮想環境をセットアップする
 
-The course requires `Python >=3.10` (to install, visit this link: https://www.python.org/downloads/)
+この手順は、[AWS 認証](https://docs.aws.amazon.com/cli/v1/userguide/cli-authentication-short-term.html) を使用してローカルで使用すること、および [Amazon SageMaker JupyterLab](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-jl.html) または [Amazon SageMaker コード エディタ](https://docs.aws.amazon.com/sagemaker/latest/dg/code-editor.html) インスタンス内で使用することを目的としています。
 
-### 1. Download the repository
+このコースには `Python >=3.10` が必要です (インストールするには、このリンクにアクセスしてください: https://www.python.org/downloads/)
+
+### 1. リポジトリをダウンロードします
 
 ```
 git clone https://github.com/aws-samples/langgraph-agents-with-amazon-bedrock.git
 ```
 
-### 2. Install OS dependencies (Ubuntu/Debian)
+### 2. OS 依存関係をインストールします (Ubuntu/Debian)
 
 ```
 sudo apt update
 sudo apt-get install graphviz graphviz-dev python3-dev
 pip install pipx
 pipx install poetry
-pipx ensurepath
+pipx Ensurepath
 source ~/.bashrc
 ```
 
-Installation commands for other OS can be found here: https://pygraphviz.github.io/documentation/stable/install.html
+他の OS のインストール コマンドについては、こちらを参照してください: https://pygraphviz.github.io/documentation/stable/install.html
 
-### 3. Create a virtual environment and install python dependencies
+### 3. 仮想環境を作成し、Python 依存関係をインストールします
 
 ```
 cd langgraph-agents-with-amazon-bedrock
@@ -73,32 +73,32 @@ cd $INITIAL_WORKING_DIRECTORY
 poetry install
 ```
 
-### 4. Add the kernel to the Jupyter Notebook server
-The newly created python environment needs to be added to the list of available kernels of the Jupyter Notebook server.
-This is possible from within the poetry environment with the command:
+### 4. Jupyter Notebook サーバーにカーネルを追加する
+新しく作成した Python 環境を、Jupyter Notebook サーバーの使用可能なカーネルのリストに追加する必要があります。
+これは、poetry 環境内から次のコマンドで実行できます:
 ```
 poetry run python -m ipykernel install --user --name agents-dev-env
 ```
-The kernel might not appear right away in the list, in that case a refresh of the list will be needed.
+カーネルがすぐにリストに表示されない場合があります。その場合は、リストを更新する必要があります。
 
-### 5. Create and set your Tavily API key
+### 5. Tavily API キーを作成して設定する
 
-Head over to https://app.tavily.com/home and create an API KEY for free. 
+https://app.tavily.com/home にアクセスして、API キーを無料で作成します。
 
-### 6. Setup the local environment variables
+### 6. ローカル環境変数を設定する
 
-Create a personal copy of the temporary environment file [env.tmp](env.tmp) with the name `.env`, which is already added to the [.gitignore](.gitignore) to avoid committing personal information.
+個人情報がコミットされないように、[.gitignore](.gitignore) にすでに追加されている一時環境ファイル [env.tmp](env.tmp) の個人用コピーを `.env` という名前で作成します。
 ```
 cp env.tmp .env
 ```
-You can edit the preferred region to use Amazon Bedrock inside the `.env` file, if needed (the default is `us-east-1`).
+必要に応じて、`.env` ファイル内で Amazon Bedrock を使用するための優先リージョンを編集できます (デフォルトは `us-east-1`)。
 
-### 7. Store the Tavily API key
-You have two options to store the Tavily API key: 
+### 7. Tavily API キーを保存する
+Tavily API キーを保存するには、2 つのオプションがあります:
 
-1. Copy the Tavily API key inside the `.env` file. This option will be always checked first.
+1. Tavily API キーを `.env` ファイル内にコピーします。このオプションは常に最初にチェックされます。
 
-2. [Create a new secret in AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_secret.html) with the name "TAVILY_API_KEY", retrieve the secret `arn` by clicking on it, and [add an inline policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html#add-policies-console) with the [permission to read the secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_examples_read) to your [SageMaker execution role](https://docs.aws.amazon.com/sagemaker/latest/dg/domain-user-profile-view-describe.html) replacing the copied `arn` in the example below.
+2. [AWS Secrets Manager で「TAVILY_API_KEY」という名前で新しいシークレットを作成](https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_secret.html)し、シークレット `arn` をクリックして取得し、[シークレットの読み取り権限](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_examples_read)を持つ[インラインポリシー](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html#add-policies-console)を [SageMaker 実行ロール](https://docs.aws.amazon.com/sagemaker/latest/dg/domain-user-profile-view-describe.html) に追加して、以下の例でコピーした `arn` を置き換えます。
 ```
 {
     "Version": "2012-10-17",
@@ -112,11 +112,11 @@ You have two options to store the Tavily API key:
 }
 ```
 
-You are all set! Make sure to select the freshly created `agents-dev-env` kernel for each notebook.
+準備完了です。各ノートブックに新しく作成された `agents-dev-env` カーネルを選択してください。
 
-# Additional resources
+# 追加リソース
 
-- [Amazon Bedrock User Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html)
-- [LangChain documentation](https://python.langchain.com/v0.2/docs/introduction/)
-- [LangGraph github repository](https://github.com/langchain-ai/langgraph)
-- [LangSmith Prompt hub](https://smith.langchain.com/hub)
+- [Amazon Bedrock ユーザーガイド](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html)
+- [LangChain ドキュメント](https://python.langchain.com/v0.2/docs/introduction/)
+- [LangGraph github リポジトリ](https://github.com/langchain-ai/langgraph)
+- [LangSmith Prompt ハブ](https://smith.langchain.com/hub)
